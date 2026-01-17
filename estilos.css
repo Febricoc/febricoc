@@ -35,17 +35,19 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /* 3. HEADER Y NAVEGACIÓN MEJORADA */
 header {
-    background-color: var(--blanco);
+    background-color: #e6e6e6; /* Nuevo color plateado brillante */
     display: flex;
-    flex-direction: column; /* Organiza logo y menú uno sobre otro */
-    align-items: center;    /* Centra todo horizontalmente */
+    flex-direction: column;
+    align-items: center;
     padding: 1rem 5%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra un poco más marcada */
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid var(--azul-principal); /* Una línea azul sutil abajo */
 }
 
 .logo-img {
@@ -441,4 +443,98 @@ html {
     .contenedor-mapa iframe {
         height: 250px;
     }
+}
+
+/* 10. ESTILOS SECCIÓN NOSOTROS */
+#nosotros {
+    background-color: #f9f9f9; /* Fondo muy suave para diferenciar del blanco */
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.contenedor-titulo p {
+    color: var(--gris-acero);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tarjeta-info {
+    background: var(--blanco);
+    padding: 40px 30px;
+    border-radius: 20px; /* Bordes muy redondeados como la foto */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave y moderna */
+    max-width: 500px;
+    flex: 1 1 300px; /* Se adaptan al tamaño */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s;
+    border: 2px solid transparent; /* Preparado para el borde azul al hover */
+    position: relative;
+    z-index: 1;
+}
+
+/* EFECTO HOVER (Al pasar el mouse) */
+.tarjeta-info:hover {
+    transform: translateY(-15px); /* La tarjeta sube */
+    box-shadow: 0 20px 40px rgba(10, 24, 97, 0.15); /* La sombra crece */
+    border-color: var(--azul-principal); /* Aparece un borde azul fino */
+}
+
+.icono-tarjeta {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: #eef2ff; /* Círculo azul muy clarito de fondo */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tarjeta-info h3 {
+    color: var(--azul-principal);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.tarjeta-info p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Destacado para Sistecrédito */
+.badge-credito {
+    /* Degradado oficial: Azul a la izquierda, Verde a la derecha */
+    background: linear-gradient(90deg, #003399 0%, #33cc33 100%);
+    color: white; /* Texto blanco para que contraste bien */
+    padding: 15px; /* Un poco más de espacio */
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 51, 153, 0.3); /* Sombra azulada */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-credito p {
+    color: white !important; /* Asegura que el texto pequeño también sea blanco */
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.badge-credito strong {
+    font-size: 1.2rem; /* El nombre "Sistecrédito" más grande */
 }
